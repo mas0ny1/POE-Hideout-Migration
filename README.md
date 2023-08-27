@@ -31,3 +31,9 @@ Credits to #Credits to https://gist.github.com/CristenPerret/ea3da944c2e97640866
 
 And it also doesnt matter if you have different languages in your hideout file, it will importable into the game regardless of language. (the errors=ignore tag in the open() function in move.py is used to ignore characters that cannot be decoded correctly)
 ![Alt text](image-3.png)
+
+
+#TDLR
+1. Download hideout design you want, edit lines 2 - 5 with the values for the hideout that you want to use (to get the hash value and hideout name just set your hideout to the type you want, export it then copy those values over from there)  
+2. Import the hideout file into your game, see where the design is located. Use move.py to test how to move that design around until you have it in the location you want.  
+And thats it
