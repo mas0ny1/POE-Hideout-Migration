@@ -18,10 +18,10 @@ Credits to #Credits to https://gist.github.com/CristenPerret/ea3da944c2e97640866
 11. Open move.py in a text editor and change the following values:  
 `
 #Edit values here  
-fileName = 'HIDEOUT FILE NAME HERE (hideout1.hideout)'  
-xRelative = 0  
-yRelative = 0  
-fileName_output = 'OUTPUT FILE NAME HERE (FilenameOutput.hideout)'  
+fileName = 'HIDEOUT FILE NAME HERE (hideout1.hideout)'\
+xRelative = 0\
+yRelative = 0\
+fileName_output = 'OUTPUT FILE NAME HERE (FilenameOutput.hideout)'\
 `
 12. Edit the xRelative and yRelative Variables to shift the image around. When I was importing to the Stately Hideout (from Backstreet) I tested only changing X, to see which direction the image moved. And then only changing Y, to see which direction the image moved. And then I changed both X and Y to get the image to the right spot. (Which ended up being xRelative = -95, yRelative = -90). Generally around 100 units is a vertical screen length so if you wanted to move the image approximately 1 screen down you would write xRelative = -100 and yRelative = -100.
 ![Alt text](image-2.png)
