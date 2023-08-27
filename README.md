@@ -1,5 +1,5 @@
 # POE Hideout Migration
- Guide on how to move images from one hideout type to another
+ Guide on how to move designs (images) from one hideout type to another
 
 Credits to #Credits to https://gist.github.com/CristenPerret/ea3da944c2e976408662b988ee07d9e6 for base code
 
