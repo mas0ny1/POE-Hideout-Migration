@@ -24,6 +24,7 @@ Credits to #Credits to https://gist.github.com/CristenPerret/ea3da944c2e97640866
     fileName_output = 'OUTPUT FILE NAME HERE (FilenameOutput.hideout)'
 `
 12. Edit the xRelative and yRelative Variables to shift the image around. When I was importing to the Stately Hideout (from Backstreet) I tested only changing X, to see which direction the image moved. And then only changing Y, to see which direction the image moved. And then I changed both X and Y to get the image to the right spot. (Which ended up being xRelative = -95, yRelative = -90). Generally around 100 units is a vertical screen length so if you wanted to move the image approximately 1 screen down you would write xRelative = -100 and yRelative = -100.
+
 ![Alt text](image-2.png)
 
 13. If it ever says in you chat that "X Doodas could not be loaded" that generally means that some of the materials used in the design are clipping into terrain and could not be placed. You will have to go back to step 9 and change the xRelative and yRelative values to move the image around until it is not clipping into terrain (or until its in a suitable position for your liking)
