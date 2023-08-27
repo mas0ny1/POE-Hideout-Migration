@@ -12,7 +12,7 @@ Credits to #Credits to https://gist.github.com/CristenPerret/ea3da944c2e97640866
 6. Copy the text from Line 2 to Line 5 over, and paste that into the Hideout file you downloaded from https://hideoutshowcase.com/ (paste content from Hideout2.hideout to Hideout1.hideout where Hideout1 is the one downloaded from https://hideoutshowcase.com/)
 ![Alt text](image-1.png)
 7. Now import that hideout file into the game
-8. Walk around your hideout to see where the image (design) has been placed. You will most likely see it clipping within the terrain.
+8. Walk around your hideout to see where the image (design) has been placed. You will most likely see it clipping within the terrain (in your chat it will tell you if there are any errors "X doodads loaded", this can give you an idea of whether the image was loaded in or not)
 9. Now we will use move.py to change all the coordinates of the things used in the hideout design, to shift the image (design) to the right spot
 10. Make sure you have hideout1.hideout file in the same folder as move.py
 11. Open move.py in a text editor and change the following values:
