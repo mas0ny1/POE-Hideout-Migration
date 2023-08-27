@@ -15,7 +15,7 @@ Credits to #Credits to https://gist.github.com/CristenPerret/ea3da944c2e97640866
 8. Walk around your hideout to see where the image (design) has been placed. You will most likely see it clipping within the terrain (in your chat it will tell you if there are any errors "X doodads loaded", this can give you an idea of whether the image was loaded in or not)
 9. Now we will use move.py to change all the coordinates of the things used in the hideout design, to shift the image (design) to the right spot
 10. Make sure you have hideout1.hideout file in the same folder as move.py
-11. Open move.py in a text editor and change the following values:
+11. Open move.py in a text editor and change the following values:  
 `
 #Edit values here
 fileName = 'HIDEOUT FILE NAME HERE (hideout1.hideout)'
