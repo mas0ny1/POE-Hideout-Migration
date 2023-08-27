@@ -3,19 +3,19 @@
 
 Credits to #Credits to https://gist.github.com/CristenPerret/ea3da944c2e976408662b988ee07d9e6 for base code
 
-Step 1: Find a hideout design you want on https://hideoutshowcase.com/
-Step 2: Download the hideout file (We will call this Hideout1.hideout)
+1. Find a hideout design you want on https://hideoutshowcase.com/
+2. Download the hideout file (We will call this Hideout1.hideout)
 ![Alt text](image.png)
-Step 3: Log into POE, to go your hideout and change it to the hideout type you want (For example: Stately Hideout)
-Step 4: After setting your hideout to the type you want, export it using the in game (We will call this Hideout2.hideout)
-Step 5: Locate and open the .hideout file (Hideout2.hideout, the one you just exported)
-Step 6: Copy the text from Line 2 to Line 5 over, and paste that into the Hideout file you downloaded from https://hideoutshowcase.com/ (paste content from Hideout2.hideout to Hideout1.hideout where Hideout1 is the one downloaded from https://hideoutshowcase.com/)
+3. Log into POE, to go your hideout and change it to the hideout type you want (For example: Stately Hideout)
+4. After setting your hideout to the type you want, export it using the in game (We will call this Hideout2.hideout)
+5. Locate and open the .hideout file (Hideout2.hideout, the one you just exported)
+6. Copy the text from Line 2 to Line 5 over, and paste that into the Hideout file you downloaded from https://hideoutshowcase.com/ (paste content from Hideout2.hideout to Hideout1.hideout where Hideout1 is the one downloaded from https://hideoutshowcase.com/)
 ![Alt text](image-1.png)
-Step 7: Now import that hideout file into the game
-Step 8: Walk around your hideout to see where the image (design) has been placed. You will most likely see it clipping within the terrain.
-Step 9: Now we will use move.py to change all the coordinates of the things used in the hideout design, to shift the image (design) to the right spot
-Step 10: Make sure you have hideout1.hideout file in the same folder as move.py
-Step 11: Open move.py in a text editor and change the following values:
+7. Now import that hideout file into the game
+8. Walk around your hideout to see where the image (design) has been placed. You will most likely see it clipping within the terrain.
+9. Now we will use move.py to change all the coordinates of the things used in the hideout design, to shift the image (design) to the right spot
+10. Make sure you have hideout1.hideout file in the same folder as move.py
+11. Open move.py in a text editor and change the following values:
 ```#Edit values here
 fileName = 'HIDEOUT FILE NAME HERE (hideout1.hideout)'
 xRelative = 0
