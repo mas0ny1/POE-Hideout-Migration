@@ -35,5 +35,5 @@ And it also doesnt matter if you have different languages in your hideout file, 
 
 # TDLR
 1. Download hideout design you want, edit lines 2 - 5 with the values for the hideout that you want to use (to get the hash value and hideout name just set your hideout to the type you want, export it then copy those values over from there)  
-2. Import the hideout file into your game, see where the design is located. Use move.py to test how to move that design around until you have it in the location you want.  
-And thats it
+2. Import the hideout file into your game, see where the design is located. Edit move.py so the "fileName" variable is pointing to the correct hideout file and change xRelative or yRelative to move that design around until you have it in the location you want.  
+
