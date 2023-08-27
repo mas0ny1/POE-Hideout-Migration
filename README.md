@@ -1,7 +1,7 @@
 # POE Hideout Migration
  Guide on how to move designs (images) from one hideout type to another
 
-Credits to #Credits to https://gist.github.com/CristenPerret/ea3da944c2e976408662b988ee07d9e6 for base code
+Credits to https://gist.github.com/CristenPerret/ea3da944c2e976408662b988ee07d9e6 for base code
 
 1. Find a hideout design you want on https://hideoutshowcase.com/
 2. Download the hideout file (We will call this Hideout1.hideout)
