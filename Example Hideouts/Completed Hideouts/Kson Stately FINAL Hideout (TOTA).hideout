@@ -3,12 +3,14 @@
   "language": "English",
   "hideout_name": "Stately Hideout",
   "hideout_hash": 31968,
+  "music_name": "Lioneye's Watch (A6)",
+  "music_hash": 44316,
   "doodads": {
     "Stash": {
       "hash": 3230065491,
-      "x": 164,
+      "x": 157,
       "y": 297,
-      "r": 0,
+      "r": 18571,
       "fv": 0
     },
     "Guild Stash": {
@@ -18,17 +20,17 @@
       "r": 0,
       "fv": 0
     },
-    "Waypoint": {
-      "hash": 1224707366,
-      "x": 197,
-      "y": 266,
-      "r": 0,
+    "Stygian Waypoint": {
+      "hash": 246107379,
+      "x": 202,
+      "y": 268,
+      "r": 61112,
       "fv": 0
     },
     "Crafting Bench": {
       "hash": 2059629901,
-      "x": 185,
-      "y": 293,
+      "x": 184,
+      "y": 295,
       "r": 59714,
       "fv": 6
     },
@@ -160,23 +162,16 @@
     },
     "Faithful Hound Pet": {
       "hash": 406956967,
-      "x": 159,
-      "y": 393,
-      "r": 55111,
+      "x": 258,
+      "y": 466,
+      "r": 14661,
       "fv": 0
-    },
-    "Transmuted Peddler's Rain Hideout Decoration": {
-      "hash": 3485038435,
-      "x": 188,
-      "y": 257,
-      "r": 0,
-      "fv": 1
     },
     "Enraged Sandfish Pet": {
       "hash": 3850464906,
-      "x": 201,
-      "y": 192,
-      "r": 33511,
+      "x": 391,
+      "y": 220,
+      "r": 16384,
       "fv": 0
     },
     "Stone Pieces": {
@@ -4129,9 +4124,9 @@
     },
     "Stone Pieces": {
       "hash": 1566776343,
-      "x": 156,
-      "y": 298,
-      "r": 18171,
+      "x": 159,
+      "y": 301,
+      "r": 14512,
       "fv": 13
     },
     "Volcanic Pebble": {
@@ -4784,6 +4779,13 @@
       "y": 235,
       "r": 30721,
       "fv": 13
+    },
+    "Transmuted Peddler's Rain Hideout Decoration": {
+      "hash": 3485038435,
+      "x": 203,
+      "y": 269,
+      "r": 0,
+      "fv": 1
     }
   }
 }
