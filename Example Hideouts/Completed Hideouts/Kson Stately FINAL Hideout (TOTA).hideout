@@ -162,10 +162,17 @@
     },
     "Faithful Hound Pet": {
       "hash": 406956967,
-      "x": 258,
-      "y": 466,
-      "r": 14661,
+      "x": 163,
+      "y": 483,
+      "r": 42627,
       "fv": 0
+    },
+    "Transmuted Peddler's Rain Hideout Decoration": {
+      "hash": 3485038435,
+      "x": 203,
+      "y": 269,
+      "r": 0,
+      "fv": 1
     },
     "Enraged Sandfish Pet": {
       "hash": 3850464906,
@@ -1261,9 +1268,9 @@
     },
     "Stone Pieces": {
       "hash": 1566776343,
-      "x": 161,
-      "y": 280,
-      "r": 6549,
+      "x": 160,
+      "y": 277,
+      "r": 6847,
       "fv": 10
     },
     "Volcanic Pebble": {
@@ -4126,7 +4133,7 @@
       "hash": 1566776343,
       "x": 159,
       "y": 301,
-      "r": 14512,
+      "r": 14511,
       "fv": 13
     },
     "Volcanic Pebble": {
@@ -4780,12 +4787,12 @@
       "r": 30721,
       "fv": 13
     },
-    "Transmuted Peddler's Rain Hideout Decoration": {
-      "hash": 3485038435,
-      "x": 203,
-      "y": 269,
-      "r": 0,
-      "fv": 1
+    "Relic Locker": {
+      "hash": 12969733,
+      "x": 153,
+      "y": 246,
+      "r": 48207,
+      "fv": 0
     }
   }
 }
