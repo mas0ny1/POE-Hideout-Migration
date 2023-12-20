@@ -2,6 +2,7 @@
  Guide on how to move designs (images) from one hideout type to another
 
 Credits to https://gist.github.com/CristenPerret/ea3da944c2e976408662b988ee07d9e6 for base code
+
 Credits to	chuxfivefive for hideouts:
 1. https://hideoutshowcase.com/hideout/show/4956/title/VSHOJO%20-%20Kson
 2. https://hideoutshowcase.com/hideout/show/5930/title/white%20shirt
