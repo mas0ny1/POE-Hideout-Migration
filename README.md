@@ -50,3 +50,5 @@ Discoveries so far:
 3. The order of an item is tacked onto the end of the file (so the next decoration you add gets placed at the end of the file, so it seems like order matters for the scourge dimension)
 
 My next idea is to test to see if fv is the layering or exposure or visibility value or something by changing it and seeing if it changes the image
+
+So after some further testing, I believe the issue is the decoration limit stopping us from putting down enough decorations to show 2 anime girls gg
