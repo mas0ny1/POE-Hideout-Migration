@@ -37,3 +37,15 @@ And it also doesnt matter if you have different languages in your hideout file, 
 1. Download hideout design you want, edit lines 2 - 5 with the values for the hideout that you want to use (to get the hash value and hideout name just set your hideout to the type you want, export it then copy those values over from there)  
 2. Import the hideout file into your game, see where the design is located. Edit move.py so the "fileName" variable is pointing to the correct hideout file and change xRelative or yRelative to move that design around until you have it in the location you want.  
 
+
+
+
+
+#Testing Scourge Dimenion Hideout Decoration
+Trying to figure out how to get it so that can have anime girl in main dimension, then another when you click on the scourge hideout decoration.
+
+Discoveries so far:
+fv seems to be correlated to scourge dimension (fv = 64)
+To move items into the scourge dimension, you need to first have the scourge dimension item listed (in the doodads list) before having everythinig after only being items in the scourge dimension (everything must have an fv of 64). The order of an item is tacked onto the end of the file (so the next decoration you add gets placed at the end of the file, so it seems like order matters for the scourge dimension)
+
+My next idea is to test to see if fv is the layering or exposure or visibility value or something by changing it and seeing if it changes the image
