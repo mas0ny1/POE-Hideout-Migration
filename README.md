@@ -41,7 +41,7 @@ And it also doesnt matter if you have different languages in your hideout file, 
 
 
 
-#Testing Scourge Dimenion Hideout Decoration
+# Testing Scourge Dimenion Hideout Decoration
 Trying to figure out how to get it so that can have anime girl in main dimension, then another when you click on the scourge hideout decoration.
 
 Discoveries so far:
