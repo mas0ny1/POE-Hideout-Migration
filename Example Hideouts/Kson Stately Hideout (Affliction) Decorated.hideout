@@ -6,24 +6,24 @@
   "music_name": "Lioneye's Watch (A6)",
   "music_hash": 44316,
   "doodads": {
-    "Stash": {
-      "hash": 3230065491,
+    "Sentinel Stash": {
+      "hash": 136713215,
       "x": 413,
-      "y": 624,
-      "r": 56926,
+      "y": 627,
+      "r": 57967,
       "fv": 0
     },
-    "Guild Stash": {
-      "hash": 139228481,
-      "x": 400,
-      "y": 557,
-      "r": 57357,
-      "fv": 64
+    "Sentinel Guild Stash": {
+      "hash": 1024529650,
+      "x": 402,
+      "y": 558,
+      "r": 57043,
+      "fv": 0
     },
     "Stygian Waypoint": {
       "hash": 246107379,
       "x": 425,
-      "y": 579,
+      "y": 580,
       "r": 0,
       "fv": 0
     },
@@ -176,16 +176,16 @@
     },
     "Relic Locker": {
       "hash": 12969733,
-      "x": 395,
-      "y": 552,
+      "x": 396,
+      "y": 553,
       "r": 57341,
       "fv": 64
     },
     "Faithful Hound Pet": {
       "hash": 406956967,
-      "x": 257,
-      "y": 1268,
-      "r": 47093,
+      "x": 462,
+      "y": 1097,
+      "r": 49152,
       "fv": 0
     },
     "Transmuted Peddler's Rain Hideout Decoration": {
@@ -197,16 +197,16 @@
     },
     "Enraged Sandfish Pet": {
       "hash": 3850464906,
-      "x": 223,
-      "y": 1266,
-      "r": 28318,
+      "x": 274,
+      "y": 1154,
+      "r": 15849,
       "fv": 0
     },
     "Tunnel Bear Pet": {
       "hash": 3754687775,
-      "x": 236,
-      "y": 1263,
-      "r": 32768,
+      "x": 338,
+      "y": 1048,
+      "r": 64940,
       "fv": 0
     },
     "Volcanic Pebble": {
@@ -4793,6 +4793,20 @@
       "y": 586,
       "r": 43006,
       "fv": 4
+    },
+    "Sulphite Light": {
+      "hash": 1999675025,
+      "x": 414,
+      "y": 555,
+      "r": 24327,
+      "fv": 0
+    },
+    "Sulphite Light": {
+      "hash": 1999675025,
+      "x": 399,
+      "y": 570,
+      "r": 57098,
+      "fv": 0
     }
   }
 }
