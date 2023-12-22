@@ -183,9 +183,9 @@
     },
     "Faithful Hound Pet": {
       "hash": 406956967,
-      "x": 242,
-      "y": 1243,
-      "r": 10926,
+      "x": 317,
+      "y": 1229,
+      "r": 23193,
       "fv": 0
     },
     "Transmuted Peddler's Rain Hideout Decoration": {
@@ -197,16 +197,16 @@
     },
     "Enraged Sandfish Pet": {
       "hash": 3850464906,
-      "x": 288,
-      "y": 1226,
-      "r": 11290,
+      "x": 340,
+      "y": 1206,
+      "r": 24576,
       "fv": 0
     },
     "Tunnel Bear Pet": {
       "hash": 3754687775,
-      "x": 213,
-      "y": 1244,
-      "r": 51707,
+      "x": 244,
+      "y": 1228,
+      "r": 49152,
       "fv": 0
     },
     "Volcanic Pebble": {
