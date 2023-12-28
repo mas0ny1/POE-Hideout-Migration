@@ -38,7 +38,7 @@
       "hash": 2349553377,
       "x": 379,
       "y": 638,
-      "r": 30913,
+      "r": 29127,
       "fv": 0
     },
     "Heart of the Grove Hideout Decoration": {
@@ -183,9 +183,9 @@
     },
     "Faithful Hound Pet": {
       "hash": 406956967,
-      "x": 317,
-      "y": 1229,
-      "r": 23193,
+      "x": 308,
+      "y": 1276,
+      "r": 38182,
       "fv": 0
     },
     "Transmuted Peddler's Rain Hideout Decoration": {
@@ -198,15 +198,15 @@
     "Enraged Sandfish Pet": {
       "hash": 3850464906,
       "x": 340,
-      "y": 1206,
-      "r": 24576,
+      "y": 1242,
+      "r": 27789,
       "fv": 0
     },
     "Tunnel Bear Pet": {
       "hash": 3754687775,
-      "x": 244,
-      "y": 1228,
-      "r": 49152,
+      "x": 242,
+      "y": 1226,
+      "r": 50142,
       "fv": 0
     },
     "Volcanic Pebble": {
