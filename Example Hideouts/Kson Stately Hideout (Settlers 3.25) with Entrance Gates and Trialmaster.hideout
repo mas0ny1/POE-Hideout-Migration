@@ -169,9 +169,9 @@
     },
     "Elemancer's Totem Hideout Decoration": {
       "hash": 3603647487,
-      "x": 492,
+      "x": 494,
       "y": 540,
-      "r": 49209,
+      "r": 49576,
       "fv": 0
     },
     "Chained Combat Arena Hideout Decoration": {
@@ -183,9 +183,9 @@
     },
     "Goblin Troupe Pet": {
       "hash": 451410376,
-      "x": 306,
-      "y": 1189,
-      "r": 13436,
+      "x": 374,
+      "y": 1087,
+      "r": 60121,
       "fv": 0
     },
     "Scourge Hideout Decoration": {
@@ -204,16 +204,16 @@
     },
     "Faithful Hound Pet": {
       "hash": 406956967,
-      "x": 334,
-      "y": 1247,
-      "r": 15689,
+      "x": 241,
+      "y": 1262,
+      "r": 46539,
       "fv": 0
     },
     "Enraged Sandfish Pet": {
       "hash": 3850464906,
-      "x": 396,
-      "y": 1099,
-      "r": 47429,
+      "x": 380,
+      "y": 1038,
+      "r": 13700,
       "fv": 0
     },
     "Volcanic Pebble": {
@@ -4814,6 +4814,13 @@
       "y": 575,
       "r": 0,
       "fv": 64
+    },
+    "Trialmaster Hideout Decoration": {
+      "hash": 1398651980,
+      "x": 403,
+      "y": 531,
+      "r": 24386,
+      "fv": 0
     }
   }
 }
