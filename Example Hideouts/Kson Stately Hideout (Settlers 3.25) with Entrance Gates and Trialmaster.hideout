@@ -204,9 +204,9 @@
     },
     "Goblin Troupe Pet": {
       "hash": 451410376,
-      "x": 316,
-      "y": 1260,
-      "r": 32768,
+      "x": 242,
+      "y": 1307,
+      "r": 16384,
       "fv": 0
     },
     "Scourge Hideout Decoration": {
@@ -225,9 +225,9 @@
     },
     "Faithful Hound Pet": {
       "hash": 406956967,
-      "x": 277,
-      "y": 1292,
-      "r": 11547,
+      "x": 308,
+      "y": 1276,
+      "r": 44789,
       "fv": 0
     },
     "Volcanic Pebble": {
