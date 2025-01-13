@@ -6,156 +6,121 @@
   "doodads": {
     "Stash": {
       "hash": 3230065491,
-      "x": 645,
-      "y": 550,
-      "r": 57624,
+      "x": 983,
+      "y": 540,
+      "r": 49321,
       "fv": 0
     },
     "Guild Stash": {
       "hash": 139228481,
-      "x": 641,
-      "y": 559,
-      "r": 57186,
+      "x": 983,
+      "y": 532,
+      "r": 49438,
       "fv": 0
     },
     "Stormcaller Tinker's Waypoint": {
       "hash": 2540954578,
-      "x": 630,
-      "y": 537,
+      "x": 974,
+      "y": 541,
       "r": 0,
       "fv": 0
     },
     "Atzoatl Map Device": {
       "hash": 3802575025,
-      "x": 689,
-      "y": 536,
-      "r": 0,
+      "x": 923,
+      "y": 540,
+      "r": 32915,
       "fv": 0
     },
     "Relic Locker": {
       "hash": 12969733,
-      "x": 610,
-      "y": 545,
-      "r": 48476,
+      "x": 983,
+      "y": 521,
+      "r": 49376,
       "fv": 0
     },
     "Reforging Bench": {
       "hash": 3263423625,
-      "x": 624,
-      "y": 551,
-      "r": 48985,
+      "x": 985,
+      "y": 552,
+      "r": 0,
       "fv": 0
     },
     "Ancestral Canoe Crafting Bench": {
       "hash": 1592459160,
-      "x": 629,
-      "y": 563,
-      "r": 5231,
+      "x": 970,
+      "y": 562,
+      "r": 0,
       "fv": 0
     },
     "Well": {
       "hash": 2057229261,
-      "x": 569,
+      "x": 959,
       "y": 520,
       "r": 0,
       "fv": 1
     },
     "Alva": {
       "hash": 2115859440,
-      "x": 659,
-      "y": 550,
+      "x": 990,
+      "y": 533,
       "r": 51432,
       "fv": 0
     },
     "The Hooded One": {
       "hash": 4210047056,
-      "x": 626,
-      "y": 487,
+      "x": 982,
+      "y": 506,
       "r": 60586,
       "fv": 0
     },
     "Atalui, Blood Priestess": {
       "hash": 1023253651,
-      "x": 638,
-      "y": 562,
-      "r": 41172,
+      "x": 982,
+      "y": 558,
+      "r": 59524,
       "fv": 0
     },
     "Ketzuli, Architect of Time": {
       "hash": 2204408127,
-      "x": 648,
-      "y": 562,
+      "x": 991,
+      "y": 554,
       "r": 22733,
       "fv": 0
     },
     "Doryani": {
       "hash": 3673653565,
-      "x": 650,
-      "y": 551,
-      "r": 56313,
+      "x": 989,
+      "y": 541,
+      "r": 61361,
       "fv": 0
     },
     "Rog": {
       "hash": 408811958,
-      "x": 644,
-      "y": 515,
+      "x": 994,
+      "y": 508,
       "r": 42565,
       "fv": 0
     },
     "Tujen": {
       "hash": 1188734792,
-      "x": 646,
-      "y": 523,
+      "x": 988,
+      "y": 507,
       "r": 30150,
       "fv": 0
     },
     "Dannig": {
       "hash": 2939302567,
-      "x": 650,
-      "y": 520,
+      "x": 987,
+      "y": 513,
       "r": 30302,
       "fv": 0
     },
     "Gwennen": {
       "hash": 2230709308,
-      "x": 649,
-      "y": 514,
+      "x": 995,
+      "y": 515,
       "r": 26026,
-      "fv": 0
-    },
-    "Commemorative Malachai Statue Hideout Decoration": {
-      "hash": 2525701763,
-      "x": 510,
-      "y": 468,
-      "r": 32713,
-      "fv": 0
-    },
-    "Commemorative Dominus Statue Hideout Decoration": {
-      "hash": 99228286,
-      "x": 591,
-      "y": 470,
-      "r": 32796,
-      "fv": 0
-    },
-    "Commemorative Vaal Oversoul Statue Hideout Decoration": {
-      "hash": 1072124116,
-      "x": 544,
-      "y": 467,
-      "r": 32792,
-      "fv": 0
-    },
-    "Baby Crowbell Pet": {
-      "hash": 583221441,
-      "x": 512,
-      "y": 532,
-      "r": 42627,
-      "fv": 0
-    },
-    "Commemorative Hillock Statue Hideout Decoration": {
-      "hash": 437057711,
-      "x": 616,
-      "y": 470,
-      "r": 33205,
       "fv": 0
     },
     "Faridun Chains": {
@@ -1424,6 +1389,41 @@
       "y": 746,
       "r": 9476,
       "fv": 14
+    },
+    "Commemorative Hillock Statue Hideout Decoration": {
+      "hash": 437057711,
+      "x": 1018,
+      "y": 498,
+      "r": 49401,
+      "fv": 0
+    },
+    "Commemorative Vaal Oversoul Statue Hideout Decoration": {
+      "hash": 1072124116,
+      "x": 1019,
+      "y": 481,
+      "r": 48919,
+      "fv": 0
+    },
+    "Commemorative Dominus Statue Hideout Decoration": {
+      "hash": 99228286,
+      "x": 990,
+      "y": 466,
+      "r": 33017,
+      "fv": 0
+    },
+    "Commemorative Malachai Statue Hideout Decoration": {
+      "hash": 2525701763,
+      "x": 963,
+      "y": 465,
+      "r": 33015,
+      "fv": 0
+    },
+    "Baby Crowbell Pet": {
+      "hash": 583221441,
+      "x": 942,
+      "y": 518,
+      "r": 0,
+      "fv": 0
     }
   }
 }
