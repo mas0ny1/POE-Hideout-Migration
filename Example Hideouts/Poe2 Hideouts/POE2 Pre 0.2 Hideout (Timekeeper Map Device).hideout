@@ -25,11 +25,11 @@
       "r": 0,
       "fv": 0
     },
-    "Atzoatl Map Device": {
-      "hash": 3802575025,
-      "x": 923,
-      "y": 540,
-      "r": 32915,
+    "Bronze Timekeeper's Map Device": {
+      "hash": 2349553377,
+      "x": 937,
+      "y": 542,
+      "r": 30566,
       "fv": 0
     },
     "Relic Locker": {
@@ -146,9 +146,9 @@
     },
     "Baby Crowbell Pet": {
       "hash": 583221441,
-      "x": 924,
-      "y": 466,
-      "r": 62597,
+      "x": 965,
+      "y": 552,
+      "r": 49152,
       "fv": 0
     },
     "Commemorative Hillock Statue Hideout Decoration": {
@@ -156,6 +156,13 @@
       "x": 1018,
       "y": 498,
       "r": 49401,
+      "fv": 0
+    },
+    "Transmuted Peddler's Rain Hideout Decoration": {
+      "hash": 3485038435,
+      "x": 974,
+      "y": 524,
+      "r": 0,
       "fv": 0
     },
     "Faridun Chains": {
