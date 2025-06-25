@@ -4,10 +4,11 @@ import json
 #Credits to https://gist.github.com/CristenPerret/ea3da944c2e976408662b988ee07d9e6
 
 #Edit values here
-fileName = 'WhiteEditFV.hideout'
-xRelative = 0
-yRelative = 0
-fvFixed = 64 #64 after Scourge Hideout Decoration (fv: 64) is how you add decorations to the scourge dimension
+fileName = 'kson.hideout'
+xRelative = -66
+yRelative = -228
+#use -1 to ignore fvFixed
+fvFixed = -1 #using the value 64 after Scourge Hideout Decoration (fv: 64) is how you add decorations to the scourge dimension, 
 fileName_output = 'test.hideout' 
 
 #If changing hideout 'tiles/map' you must change the "hideout_name" + "hideout_hash" manually.
@@ -28,17 +29,19 @@ for line in lines:
     if '"x":' in line:
         coord = int(line.split(':')[1].rstrip(','))
         coord += xRelative
-        line = '          "x":' + str(coord) + ","
+        line = '      "x": ' + str(coord) + ","
         output_file.append(line +'\n')
     elif '"y":' in line:
         coord = int(line.split(':')[1].rstrip(','))
         coord += yRelative
-        line = '          "y":' + str(coord) + ","
+        line = '      "y": ' + str(coord) + ","
         output_file.append(line + '\n') 
     elif '"fv":' in line:
         coord = int(line.split(':')[1].rstrip(','))
-        coord = fvFixed
-        line = '      "fv":' + str(coord) + ","
+        if fvFixed >= 0:
+            # If fvFixed is set to a value, use that value
+            coord = fvFixed
+        line = '      "fv": ' + str(coord)
         output_file.append(line + '\n')
         pass
     else:
