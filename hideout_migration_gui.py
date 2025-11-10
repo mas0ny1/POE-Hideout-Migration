@@ -5,7 +5,10 @@ from PyQt6.QtWidgets import (
     QPushButton, QLabel, QFileDialog, QSpinBox, QMessageBox
 )
 from PyQt6.QtCore import Qt
-from hideout_migration import migrate_hideout
+from hideout_migration import (
+    migrate_hideout, read_hideout_file, extract_language,
+    find_waypoint_coords
+)
 
 class HideoutMigrationGUI(QMainWindow):
     def __init__(self):
@@ -56,37 +59,127 @@ class HideoutMigrationGUI(QMainWindow):
         output_layout.addWidget(output_btn)
         layout.addLayout(output_layout)
 
-        # Offset controls
-        offset_layout = QHBoxLayout()
+        # Offset controls section
+        offset_group = QVBoxLayout()
         
-        # X offset
+        # Current coordinates display
+        coords_layout = QHBoxLayout()
+        
+        # X offset display
         x_layout = QHBoxLayout()
         x_layout.addWidget(QLabel('X Offset:'))
         self.x_spin = QSpinBox()
         self.x_spin.setRange(-1000, 1000)
         self.x_spin.setValue(0)
+        self.x_spin.setReadOnly(True)
         x_layout.addWidget(self.x_spin)
-        offset_layout.addLayout(x_layout)
+        coords_layout.addLayout(x_layout)
         
-        # Y offset
+        # Y offset display
         y_layout = QHBoxLayout()
         y_layout.addWidget(QLabel('Y Offset:'))
         self.y_spin = QSpinBox()
         self.y_spin.setRange(-1000, 1000)
         self.y_spin.setValue(0)
+        self.y_spin.setReadOnly(True)
         y_layout.addWidget(self.y_spin)
-        offset_layout.addLayout(y_layout)
+        coords_layout.addLayout(y_layout)
         
-        layout.addLayout(offset_layout)
+        offset_group.addLayout(coords_layout)
+        
+        # Step size control
+        step_layout = QHBoxLayout()
+        step_layout.addWidget(QLabel('Step Size:'))
+        self.step_spin = QSpinBox()
+        self.step_spin.setRange(1, 100)
+        self.step_spin.setValue(30)
+        step_layout.addWidget(self.step_spin)
+        offset_group.addLayout(step_layout)
+        
+        # Direction buttons (8 directions + reset)
+        buttons_layout = QVBoxLayout()
+        
+        # North row (NW, N, NE)
+        north_layout = QHBoxLayout()
+        north_layout.addStretch()
+        
+        nw_btn = QPushButton('↖')
+        nw_btn.setFixedSize(40, 40)
+        nw_btn.clicked.connect(lambda: self.move_direction('NW'))
+        north_layout.addWidget(nw_btn)
+        
+        n_btn = QPushButton('↑')
+        n_btn.setFixedSize(40, 40)
+        n_btn.clicked.connect(lambda: self.move_direction('N'))
+        north_layout.addWidget(n_btn)
+        
+        ne_btn = QPushButton('↗')
+        ne_btn.setFixedSize(40, 40)
+        ne_btn.clicked.connect(lambda: self.move_direction('NE'))
+        north_layout.addWidget(ne_btn)
+        
+        north_layout.addStretch()
+        buttons_layout.addLayout(north_layout)
+        
+        # Middle row (W, Reset, E)
+        middle_layout = QHBoxLayout()
+        middle_layout.addStretch()
+        
+        w_btn = QPushButton('←')
+        w_btn.setFixedSize(40, 40)
+        w_btn.clicked.connect(lambda: self.move_direction('W'))
+        middle_layout.addWidget(w_btn)
+        
+        reset_btn = QPushButton('R')
+        reset_btn.setFixedSize(40, 40)
+        reset_btn.clicked.connect(self.reset_offsets)
+        middle_layout.addWidget(reset_btn)
+        
+        e_btn = QPushButton('→')
+        e_btn.setFixedSize(40, 40)
+        e_btn.clicked.connect(lambda: self.move_direction('E'))
+        middle_layout.addWidget(e_btn)
+        
+        middle_layout.addStretch()
+        buttons_layout.addLayout(middle_layout)
+        
+        # South row (SW, S, SE)
+        south_layout = QHBoxLayout()
+        south_layout.addStretch()
+        
+        sw_btn = QPushButton('↙')
+        sw_btn.setFixedSize(40, 40)
+        sw_btn.clicked.connect(lambda: self.move_direction('SW'))
+        south_layout.addWidget(sw_btn)
+        
+        s_btn = QPushButton('↓')
+        s_btn.setFixedSize(40, 40)
+        s_btn.clicked.connect(lambda: self.move_direction('S'))
+        south_layout.addWidget(s_btn)
+        
+        se_btn = QPushButton('↘')
+        se_btn.setFixedSize(40, 40)
+        se_btn.clicked.connect(lambda: self.move_direction('SE'))
+        south_layout.addWidget(se_btn)
+        
+        south_layout.addStretch()
+        buttons_layout.addLayout(south_layout)
+        
+        offset_group.addLayout(buttons_layout)
+        layout.addLayout(offset_group)
 
         # Help text
         help_text = """
         Instructions:
         1. Select the source hideout file (from hideoutshowcase.com)
-        2. Select the target hideout file (exported from your game)
+        2. Select the target hideout file (this should be an empty hideout of the type you want to use)
+           NOTE: The target hideout is just for the hideout type - its contents don't matter,
+           it's only used to get the correct hideout type information
         3. Choose where to save the output file
-        4. Adjust X and Y offsets to move decorations
+        4. Use the directional buttons to adjust the position (step size: 30 units per click)
         5. Click 'Migrate Hideout' to generate the new hideout file
+        
+        Tip: The 'R' button in the center resets to the waypoint-matched position
         """
         help_label = QLabel(help_text)
         help_label.setWordWrap(True)
@@ -120,6 +213,65 @@ class HideoutMigrationGUI(QMainWindow):
             self.target_file = file
             self.target_label.setText(os.path.basename(file))
 
+    def calculate_initial_offsets(self):
+        """Calculate initial offsets based on waypoint positions."""
+        if not all([self.source_file, self.target_file]):
+            return
+        
+        try:
+            # Read both hideout files
+            source_lines = read_hideout_file(self.source_file)
+            target_lines = read_hideout_file(self.target_file)
+            
+            # Check languages match
+            source_lang = extract_language(source_lines)
+            target_lang = extract_language(target_lines)
+            
+            if source_lang != target_lang:
+                QMessageBox.warning(
+                    self,
+                    "Language Mismatch",
+                    f"Source hideout is in {source_lang}, but target hideout is in {target_lang}.\n"
+                    "Please use hideout files with matching languages."
+                )
+                return
+            
+            # Calculate waypoint-based offsets
+            try:
+                source_x, source_y = find_waypoint_coords(source_lines)
+                target_x, target_y = find_waypoint_coords(target_lines)
+                
+                x_offset = target_x - source_x
+                y_offset = target_y - source_y
+                
+                self.x_spin.setValue(x_offset)
+                self.y_spin.setValue(y_offset)
+                
+                QMessageBox.information(
+                    self,
+                    "Offset Calculation",
+                    f"Initial offsets calculated based on waypoint positions:\n"
+                    f"X offset: {x_offset} (target: {target_x} - source: {source_x})\n"
+                    f"Y offset: {y_offset} (target: {target_y} - source: {source_y})"
+                )
+                
+            except ValueError as e:
+                QMessageBox.warning(
+                    self,
+                    "Waypoint Not Found",
+                    f"Could not calculate automatic offsets: {str(e)}\n"
+                    "Starting with default offsets (0,0)."
+                )
+                self.x_spin.setValue(0)
+                self.y_spin.setValue(0)
+                
+        except Exception as e:
+            QMessageBox.critical(
+                self,
+                "Error",
+                f"An error occurred while calculating initial offsets:\n{str(e)}"
+            )
+
     def select_output(self):
         file, _ = QFileDialog.getSaveFileName(
             self,
@@ -130,6 +282,75 @@ class HideoutMigrationGUI(QMainWindow):
         if file:
             self.output_file = file
             self.output_label.setText(os.path.basename(file))
+            # Calculate initial offsets once all files are selected
+            self.calculate_initial_offsets()
+
+    def move_direction(self, direction: str):
+        """
+        Move the offset in the specified direction by the current step size.
+        On the isometric grid:
+        - Increasing X moves Northeast
+        - Decreasing X moves Southwest
+        - Increasing Y moves Northwest
+        - Decreasing Y moves Southeast
+        """
+        step = self.step_spin.value()
+        
+        # Direction to coordinate changes mapping for isometric grid
+        direction_changes = {
+            'N': {'x': step, 'y': step},      # North (NE + NW)
+            'S': {'x': -step, 'y': -step},    # South (SW + SE)
+            'E': {'x': step, 'y': -step},     # East (NE + SE)
+            'W': {'x': -step, 'y': step},     # West (NW + SW)
+            'NE': {'x': step, 'y': 0},        # Northeast (X+)
+            'SW': {'x': -step, 'y': 0},       # Southwest (X-)
+            'NW': {'x': 0, 'y': step},        # Northwest (Y+)
+            'SE': {'x': 0, 'y': -step}        # Southeast (Y-)
+        }
+        
+        if direction in direction_changes:
+            changes = direction_changes[direction]
+            self.x_spin.setValue(self.x_spin.value() + changes['x'])
+            self.y_spin.setValue(self.y_spin.value() + changes['y'])
+    
+    def reset_offsets(self):
+        """Reset to the default waypoint-matched coordinates."""
+        if not all([self.source_file, self.target_file]):
+            QMessageBox.warning(
+                self,
+                "Files Missing",
+                "Please select both source and target hideout files first."
+            )
+            return
+            
+        try:
+            source_lines = read_hideout_file(self.source_file)
+            target_lines = read_hideout_file(self.target_file)
+            
+            source_x, source_y = find_waypoint_coords(source_lines)
+            target_x, target_y = find_waypoint_coords(target_lines)
+            
+            x_offset = target_x - source_x
+            y_offset = target_y - source_y
+            
+            self.x_spin.setValue(x_offset)
+            self.y_spin.setValue(y_offset)
+            
+            QMessageBox.information(
+                self,
+                "Reset Complete",
+                f"Reset to waypoint-based coordinates:\n"
+                f"X offset: {x_offset}\n"
+                f"Y offset: {y_offset}"
+            )
+            
+        except Exception as e:
+            QMessageBox.warning(
+                self,
+                "Reset Failed",
+                f"Could not reset to waypoint coordinates: {str(e)}\n"
+                "Please check that both hideouts have waypoints."
+            )
 
     def migrate(self):
         if not all([self.source_file, self.target_file, self.output_file]):
