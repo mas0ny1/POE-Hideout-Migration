@@ -13,4 +13,4 @@ Credits to	chuxfivefive for hideouts:
 1. https://hideoutshowcase.com/hideout/show/4956/title/VSHOJO%20-%20Kson
 
 To compile the tool yourself use the following command:  
-pyinstaller --name="POE Hideout Migration Tool" --windowed --onefile hideout_migration_gui.py
+`pyinstaller --name="POE Hideout Migration Tool" --windowed --onefile hideout_migration_gui.py`
