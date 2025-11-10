@@ -12,5 +12,5 @@ Credits to https://gist.github.com/CristenPerret/ea3da944c2e976408662b988ee07d9e
 Credits to	chuxfivefive for hideouts:
 1. https://hideoutshowcase.com/hideout/show/4956/title/VSHOJO%20-%20Kson
 
-To compile the tool yourself use the following command:
+To compile the tool yourself use the following command:  
 pyinstaller --name="POE Hideout Migration Tool" --windowed --onefile hideout_migration_gui.py
